@@ -1,6 +1,7 @@
 package br.com.rodrigo.dspesquisa.entities;
 
 import br.com.rodrigo.dspesquisa.entities.enums.Platform;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -19,10 +20,12 @@ public class Game implements Serializable {
     private String title;
     private Platform platform;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "genre_id")
     private Genre genre;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "game")
     private List<Record>  records = new ArrayList<>();
 
