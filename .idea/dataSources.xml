@@ -7,5 +7,11 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/dspesquisa</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="postgres@Heroku" uuid="e7b4796c-6b11-4467-831c-c101742173a1">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-34-225-162-157.compute-1.amazonaws.com:5432/d6567uoiq2t63b</jdbc-url>
+    </data-source>
   </component>
 </project>
